@@ -3,33 +3,24 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+use App\Http\Controllers\Tenant\ProductController;
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/', [ProductController::class, 'index'])->name('dashboard');
+
+    Route::get('/new', [ProductController::class, 'create'])->name('new-product');
+    Route::post('/add-item', [ProductController::class, 'store'])->name('add-item');
+    
+    Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit-product');
+    Route::put('/edit-item/{id}', [ProductController::class, 'update'])->name('edit-item');
+
+    Route::get('/delete/{id}', [ProductController::class, 'index'])->name('delete-item'); // TODO: corrigir redirect após delete, solução temporária
+    Route::delete('/delete/{id}', [ProductController::class, 'destroy'])->name('delete-item');
+
 });
+
+

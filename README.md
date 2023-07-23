@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
+<br/>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://liberfly.com.br/" target="_blank">
+        <img width="50%" src="https://blog.liberfly.com.br/wp-content/uploads/2022/05/cropped-MicrosoftTeams-image-8-e1652819689370.png" alt="Liberfly Logo">
+    </a>
 </p>
 
-## About Laravel
+<br/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Liberfly App
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Descrição
+Este projeto foi solicitado pela empresa Liberfy, para uma avaliação dos conhjecimentos tecnicos do profissional.
+A aplicação é um PWA que tewm por objetivo registrar os chamados/suportes feitos pela empresa. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Pré-requisitos
+- Node.js
+- npm ou Yarn
 
-## Learning Laravel
+## Instalação do Front
+1. Clone o repositório: `git clone https://github.com/Ajada/liberfly-app.git`
+2. Acesse o diretório do projeto: `cd liberfly-app`
+3. Acesse o diretório do frontend: `cd front-app`
+4. Instale as dependências: `npm install` ou `yarn`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalação do Back
+1. Acesse o diretório do projeto: `cd liberfly-app`
+2. Acesse o diretório do backend: `cd api`
+3. Instale as dependências: `composer install`
+4. Clone o env.example para o `.env` e passe os dados do banco
+5. Após instalar as dependencias rode o comando `php artisan jwt:secret` e tambem o `php artisan key:generate`
+6. Rode as migrações e as seeds para popular o banco em desenvolvimento
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Lembrete
+Lembre-se de verficar o `.env` para que a `VUE_APP_API_URL` aponte para o host do laravel
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Executando o projeto
+1. Inicie o servidor de desenvolvimento do frontend: `npm run serve` ou `yarn serve`
+2. Abra o projeto no navegador: `http://localhost:8080`
+3. Faça o mesmo com o servidor de api: `php artisan serve`
 
-## Laravel Sponsors
+## Lembre-se de verificar os caminhos no .env do frontend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Produção
+- O app pode ser acessado através do link: `https://liberfly.wolftechti.com.br/` com o usuario `test@example.com` e senha `password`
 
-### Premium Partners
+## Observações
+O app foi contruido do zero, e apresenta alguns bugs na versão mobile por conta do tempo disponivel para o desenvovimento (24hrs), não cumprindo apenas com o a documentação em Swagger por conta do prazo.
+<br/>
+A aplicação usa JWT nas requisições e nas rotas como solicitado, seguindo as boas práticas de contrução de api's REST.
+<br/>
+O app foi dividido entre front e back em uma estrutura isolada, tendo suporte a PWA, mesmo não sendo solicitado.
+<br/>
+O Software esta disponivel na web para agilizar os testes e processos como configuração do ambiente de desenvolvimento.
+<br/>
+Você pode visualizar a aplicação neste link `https://liberfly.wolftechti.com.br/` e para acessa-la use o email `test@example.com` e senha `password`
+<br/>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Licença
+[MIT](https://opensource.org/licenses/MIT)
