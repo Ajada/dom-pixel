@@ -1,60 +1,52 @@
 <br/>
 <p align="center">
-    <a href="https://liberfly.com.br/" target="_blank">
-        <img width="50%" src="https://blog.liberfly.com.br/wp-content/uploads/2022/05/cropped-MicrosoftTeams-image-8-e1652819689370.png" alt="Liberfly Logo">
-    </a>
+  <a href="https://liberfly.com.br/" target="_blank">
+    <img width="50%" src="https://dompixel.com/_next/image?url=%2Fassets%2Flogo-blue.svg&w=1920&q=75" alt="DomPixel Logo">
+  </a>
 </p>
 
 <br/>
 
-# Liberfly App
+# DomPixel Shop
 
 ## Descrição
-Este projeto foi solicitado pela empresa Liberfy, para uma avaliação dos conhjecimentos tecnicos do profissional.
-A aplicação é um PWA que tewm por objetivo registrar os chamados/suportes feitos pela empresa. 
+Gerencie seus produtos de forma rápida e fácil com o app DomPixel Shop! Nosso aplicativo é projetado para simplificar a gestão do seu inventário, permitindo que você mantenha um controle completo sobre seus produtos em um único lugar.
+<br>
+Com o DomPixel Shop, você pode cadastrar novos itens em poucos cliques, definindo detalhes importantes como nome, descrição, preço e quantidade disponível. Além disso, é possível adicionar imagens dos produtos para dar uma aparência mais atraente às suas listagens.
+<br>
+Atualizar informações também é uma tarefa simples. Basta acessar a página do produto e fazer as alterações necessárias. Você pode ajustar preços, atualizar estoques ou até mesmo adicionar novas imagens de forma rápida e intuitiva.
+<br>
+Nossa interface amigável e funcionalidades inteligentes permitem que você gerencie o seu negócio de forma mais eficiente, economizando tempo e reduzindo possíveis erros. Deixe o trabalho pesado para o DomPixel Shop e concentre-se no crescimento do seu negócio!
+<br>
+Experimente o DomPixel Shop agora mesmo e descubra como é fácil manter o controle dos seus produtos e impulsionar suas vendas. Simplifique a sua rotina e leve a gestão do seu estoque para um novo patamar com o DomPixel Shop!
+<br>
 
-## Pré-requisitos
-- Node.js
-- npm ou Yarn
-
-## Instalação do Front
-1. Clone o repositório: `git clone https://github.com/Ajada/liberfly-app.git`
-2. Acesse o diretório do projeto: `cd liberfly-app`
-3. Acesse o diretório do frontend: `cd front-app`
-4. Instale as dependências: `npm install` ou `yarn`
-
-## Instalação do Back
-1. Acesse o diretório do projeto: `cd liberfly-app`
-2. Acesse o diretório do backend: `cd api`
-3. Instale as dependências: `composer install`
-4. Clone o env.example para o `.env` e passe os dados do banco
-5. Após instalar as dependencias rode o comando `php artisan jwt:secret` e tambem o `php artisan key:generate`
-6. Rode as migrações e as seeds para popular o banco em desenvolvimento
-
-## Lembrete
-Lembre-se de verficar o `.env` para que a `VUE_APP_API_URL` aponte para o host do laravel
-
-## Executando o projeto
-1. Inicie o servidor de desenvolvimento do frontend: `npm run serve` ou `yarn serve`
-2. Abra o projeto no navegador: `http://localhost:8080`
-3. Faça o mesmo com o servidor de api: `php artisan serve`
-
-## Lembre-se de verificar os caminhos no .env do frontend
+## Levantando APP
+1. Clone o repositório: `git clone https://github.com/Ajada/dom-pixel.git dompixel-shop`
+2. Acesse o diretório do projeto: `cd dompixel-shop`
+4. Instale as dependências do laravel: `composer install` 
+5. Instale as dependências do vue: `npm install` ou `yarn` 
+6. Crie e configure o arquivo `.env`, após isso rode `php artisan key:generate`
+6. Por fim rode as migrations `php artisan migrate`
+7. Suba o servidor: `php artisan serve` e `yarn dev` ou `npm run dev`
 
 ## Produção
-- O app pode ser acessado através do link: `https://liberfly.wolftechti.com.br/` com o usuario `test@example.com` e senha `password`
+- O app pode ser acessado através do link: `https://dompixel.wolftechti.com.br/` com o usuario `test@example.com` e senha `password`.
+- Em ambiente de produção, você pode convidar outros usuarios para usar o app, visto que o sistema utiliza o jetstream para gerenciar equipes e times.
 
-## Observações
-O app foi contruido do zero, e apresenta alguns bugs na versão mobile por conta do tempo disponivel para o desenvovimento (24hrs), não cumprindo apenas com o a documentação em Swagger por conta do prazo.
-<br/>
-A aplicação usa JWT nas requisições e nas rotas como solicitado, seguindo as boas práticas de contrução de api's REST.
-<br/>
-O app foi dividido entre front e back em uma estrutura isolada, tendo suporte a PWA, mesmo não sendo solicitado.
-<br/>
-O Software esta disponivel na web para agilizar os testes e processos como configuração do ambiente de desenvolvimento.
-<br/>
-Você pode visualizar a aplicação neste link `https://liberfly.wolftechti.com.br/` e para acessa-la use o email `test@example.com` e senha `password`
-<br/>
+## Dificuldade
+- Gostaria de destacar que não tive dificuldades para a criação do app, estou abituado em gerenciar bancos e criar CRUD's.
+- Apenas gostaria de mais tempo para melhorar algumas coisas, como otimizar um pouco mais o código, porem todos os requisitos funcionais foram implementados.
+
+## Considerações
+O app foi criado com o intuito de gerenciar produtos, tendo o CRUD básico de uma aplicação.
+<br>
+O layout foi criado utilizando o tailwind, para que o app tivesse um visual mais amigável e moderno.
+<br>
+Optei por não utilizar o docker, visto que não seria uma aplicação com varias regras de negócio.
+<br>
+A versão final, que esta em produção no link `https://dompixel.wolftechti.com.br/`, esta rodando com um banco em MySql, mas fique a vontade para usar o Postgres se desejar.
+<br>
 
 ## Licença
 [MIT](https://opensource.org/licenses/MIT)

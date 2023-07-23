@@ -20,10 +20,6 @@ defineProps({
       </h2>
     </template>
 
-    <!-- <pre>
-      {{ dataTable }}
-    </pre> -->
-
     <TableVue
       v-if="$page.props.dataTable.data[0]"
       :data="$page.props.dataTable.data"

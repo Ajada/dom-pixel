@@ -51,7 +51,7 @@
               </div>
 
               <div class="md:col-span-2">
-                <label for="city">Quantidade</label>
+                <label for="city">Quantidade <span class="text-red-600">*</span> </label>
                 <input
                   v-model="form.amount"
                   type="number"

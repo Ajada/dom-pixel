@@ -3,6 +3,7 @@ const words = [{
   NAME: 'DESCRIÇÃO',
   CATEGORY: 'CATEGORIA',
   PRICE: 'VALOR',
+  AMOUNT: 'QUANTIDADE',
   ACTION: 'AÇÕES'
 
 }];
