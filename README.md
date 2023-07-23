@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://liberfly.com.br/" target="_blank">
-    <img width="50%" src="https://dompixel.com/_next/image?url=%2Fassets%2Flogo-blue.svg&w=1920&q=75" alt="DomPixel Logo">
+    <img width="50%" src="https://dompixel.wolftechti.com.br/images/DompixelShop.png" alt="DomPixel Logo">
   </a>
 </p>
 

@@ -51,12 +51,12 @@ class ProductController extends Controller
         if(! $new)
             return Inertia::render('Entities/AddProduct', [
                 'message' => 'Algo deu erradao ao criar item !',
-                'color' => 'text-red-600'
+                'color' => 'text-red-500'
             ]);
 
         return Inertia::render('Entities/AddProduct', [
             'message' => 'Item adicionado com successo !',
-            'color' => 'text-green-600'
+            'color' => 'text-green-500'
         ]);
         
     }
@@ -93,7 +93,7 @@ class ProductController extends Controller
         return Inertia::render('Entities/EditProduct', [
             'product' => $products->find($id),
             'message' => 'Item editado com successo !',
-            'color' => 'text-green-600'
+            'color' => 'text-green-500'
         ]);
 
     }

@@ -16,6 +16,7 @@ Route::middleware([
     Route::post('/add-item', [ProductController::class, 'store'])->name('add-item');
     
     Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit-product');
+    Route::get('/edit-item/{id}', [ProductController::class, 'edit'])->name('edit-item'); // TODO: corrigir redirect após edição, soluçao temporária
     Route::put('/edit-item/{id}', [ProductController::class, 'update'])->name('edit-item');
 
     Route::get('/delete/{id}', [ProductController::class, 'index'])->name('delete-item'); // TODO: corrigir redirect após delete, solução temporária
