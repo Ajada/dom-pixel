@@ -1,6 +1,7 @@
 const words = [{
   'IMAGE URL': '#',
-  NAME: 'DESCRIÇÃO',
+  NAME: 'NOME',
+  DESCRIPTION: 'DESCRIÇÃO',
   CATEGORY: 'CATEGORIA',
   PRICE: 'VALOR',
   AMOUNT: 'QUANTIDADE',

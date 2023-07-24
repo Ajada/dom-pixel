@@ -69,6 +69,13 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
+            <Link
+                :href="route('register')"
+                class="my-4 text-sm text-gray-600 hover:text-gray-900 rounded-md"
+            >
+                Não tem uma conta ? Cadastre-se
+            </Link>
+
             <div class="flex items-center justify-center mt-4">
                 <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
